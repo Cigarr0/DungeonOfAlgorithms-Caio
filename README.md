@@ -19,7 +19,7 @@ Dungeon of Algorithms é um jogo top-down roguelike desenvolvido em C# com MonoG
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/dungeon-of-algorithms.git
+git clone https://github.com/lucaslopes-ti/dungeon-of-algorithms.git
 cd dungeon-of-algorithms
 ```
 
@@ -178,7 +178,7 @@ Em caso de dúvidas ou problemas:
 
 ## Licença
 
-Este projeto é de uso exclusivo educacional para o curso de Design Patterns do SENAI.
+Este projeto é de uso exclusivo educacional para o curso de Programacao de Jogos Digitais na unidade de Design Patterns do SENAI.
 
 ---
 
