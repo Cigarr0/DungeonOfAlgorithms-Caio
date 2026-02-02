@@ -29,16 +29,10 @@
   </ItemGroup>
 
   <!-- Custom target to build content before compilation (cross-platform) -->
-  <Target Name="BuildContent" BeforeTargets="Build">
+  <Target Name="BuildContent" BeforeTargets="Build" Condition="'$(BuildContentAutomatically)' == 'true'">
     <!-- Windows -->
-    <Exec Condition="$([MSBuild]::IsOSPlatform('Windows'))" 
-          Command="mgcb /@:Content\Content.mgcb /platform:DesktopGL /outputDir:Content\bin\DesktopGL\Content /intermediateDir:Content\obj\DesktopGL\net9.0\Content /workingDir:Content\" 
-          WorkingDirectory="$(MSBuildProjectDirectory)" 
-          IgnoreExitCode="false" />
+    <Exec Condition="$([MSBuild]::IsOSPlatform('Windows'))" Command="mgcb /@:Content\Content.mgcb /platform:DesktopGL /outputDir:Content\bin\DesktopGL\Content /intermediateDir:Content\obj\DesktopGL\net9.0\Content /workingDir:Content\" WorkingDirectory="$(MSBuildProjectDirectory)" IgnoreExitCode="false" />
     <!-- macOS/Linux -->
-    <Exec Condition="!$([MSBuild]::IsOSPlatform('Windows'))" 
-          Command="mgcb /@:Content/Content.mgcb /platform:DesktopGL /outputDir:Content/bin/DesktopGL/Content /intermediateDir:Content/obj/DesktopGL/net9.0/Content /workingDir:Content" 
-          WorkingDirectory="$(MSBuildProjectDirectory)" 
-          IgnoreExitCode="false" />
+    <Exec Condition="!$([MSBuild]::IsOSPlatform('Windows'))" Command="mgcb /@:Content/Content.mgcb /platform:DesktopGL /outputDir:Content/bin/DesktopGL/Content /intermediateDir:Content/obj/DesktopGL/net9.0/Content /workingDir:Content" WorkingDirectory="$(MSBuildProjectDirectory)" IgnoreExitCode="false" />
   </Target>
 </Project>
