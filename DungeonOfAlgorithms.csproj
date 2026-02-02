@@ -28,8 +28,17 @@
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*" />
   </ItemGroup>
 
-  <!-- Custom target to build content before compilation -->
+  <!-- Custom target to build content before compilation (cross-platform) -->
   <Target Name="BuildContent" BeforeTargets="Build">
-    <Exec Command="mgcb /@:Content\Content.mgcb /platform:DesktopGL /outputDir:Content\bin\DesktopGL\Content /intermediateDir:Content\obj\DesktopGL\net9.0\Content /workingDir:Content\" IgnoreExitCode="false" />
+    <!-- Windows -->
+    <Exec Condition="$([MSBuild]::IsOSPlatform('Windows'))" 
+          Command="mgcb /@:Content\Content.mgcb /platform:DesktopGL /outputDir:Content\bin\DesktopGL\Content /intermediateDir:Content\obj\DesktopGL\net9.0\Content /workingDir:Content\" 
+          WorkingDirectory="$(MSBuildProjectDirectory)" 
+          IgnoreExitCode="false" />
+    <!-- macOS/Linux -->
+    <Exec Condition="!$([MSBuild]::IsOSPlatform('Windows'))" 
+          Command="mgcb /@:Content/Content.mgcb /platform:DesktopGL /outputDir:Content/bin/DesktopGL/Content /intermediateDir:Content/obj/DesktopGL/net9.0/Content /workingDir:Content" 
+          WorkingDirectory="$(MSBuildProjectDirectory)" 
+          IgnoreExitCode="false" />
   </Target>
 </Project>
