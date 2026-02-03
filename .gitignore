@@ -11,8 +11,13 @@ obj/
 *.sln.iml
 
 # MonoGame
-Content/bin/
 Content/obj/
+# Ignorar Content/bin mas manter os arquivos .xnb e .ogg compilados
+Content/bin/*
+!Content/bin/DesktopGL/
+!Content/bin/DesktopGL/Content/
+!Content/bin/DesktopGL/Content/**/*.xnb
+!Content/bin/DesktopGL/Content/**/*.ogg
 
 # IDE
 .idea/
