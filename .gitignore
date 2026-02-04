@@ -48,3 +48,19 @@ packages/
 **/Backup/
 *.bak
 *.backup
+
+# Scripts de automação local
+auto-commit.ps1
+auto-commit-log.txt
+
+# Arquivos temporários e de teste
+error_log.txt
+error_output.txt
+stderr.txt
+stdout.txt
+
+# Músicas de backup/teste
+Content/Music/*_backup*.mp3
+Content/Music/*_original.mp3
+Content/Music/music_bg.*
+Content/Music/Silhouette*.mp3

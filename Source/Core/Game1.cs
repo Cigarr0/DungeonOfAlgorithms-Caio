@@ -277,13 +277,20 @@ public class Game1 : Game
         // MUSICA DE FUNDO
         try
         {
+            System.Console.WriteLine("[DEBUG] Tentando carregar música...");
             _ambientMusic = Content.Load<Song>("Music/OnFlip");
+            System.Console.WriteLine("[DEBUG] Música carregada com sucesso!");
             AudioManager.Instance.PlayAmbientMusic(_ambientMusic, 1.0f);
             System.Console.WriteLine("Ambient music loaded and playing.");
         }
         catch (Exception ex)
         {
             System.Console.WriteLine("Error loading or playing music: " + ex.Message);
+            System.Console.WriteLine("Stack Trace: " + ex.StackTrace);
+            if (ex.InnerException != null)
+            {
+                System.Console.WriteLine("Inner Exception: " + ex.InnerException.Message);
+            }
         }
 
         // --- Vinheta: Efeito cinematográfico que escurece as bordas ---

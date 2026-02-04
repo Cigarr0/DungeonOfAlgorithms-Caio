@@ -7,4 +7,4 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 using var game = new DungeonOfAlgorithms.Source.Core.Game1();
-game.Run(); // BORA! Que comece a caçada aos memory leaks!
+game.Run();

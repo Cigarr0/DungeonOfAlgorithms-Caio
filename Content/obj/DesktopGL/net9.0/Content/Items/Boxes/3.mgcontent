@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Lucas/OneDrive/Documentos/DungeonOfAlgorithms-Educacional/Content/Items/Boxes/3.png</SourceFile>
-  <SourceTime>2026-02-03T12:49:43.59916-03:00</SourceTime>
-  <DestFile>C:/Users/Lucas/OneDrive/Documentos/DungeonOfAlgorithms-Educacional/Content/bin/DesktopGL/Content/Items/Boxes/3.xnb</DestFile>
-  <DestTime>2026-02-03T12:57:47.776899-03:00</DestTime>
+  <SourceFile>C:/Users/Lucas/DungeonOfAlgorithms-Educacional-1/Content/Items/Boxes/3.png</SourceFile>
+  <SourceTime>2026-02-03T23:06:08.3904243-03:00</SourceTime>
+  <DestFile>C:/Users/Lucas/DungeonOfAlgorithms-Educacional-1/Content/bin/DesktopGL/Content/Items/Boxes/3.xnb</DestFile>
+  <DestTime>2026-02-03T23:29:04.5486273-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-10-20T11:25:32-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
