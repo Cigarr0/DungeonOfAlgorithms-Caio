@@ -150,6 +150,7 @@ public class Game1 : Game
 
         // Sala 1 - 5 moedas de boas vindas
         room1.AddItem(ItemFactory.CreateItem("Coin", new Vector2(80, 80)));
+        room1.AddItem(ItemFactory.CreateItem("Coin", new Vector2(40, 80)));
         room1.AddItem(ItemFactory.CreateItem("Coin", new Vector2(150, 150)));
         room1.AddItem(ItemFactory.CreateItem("Coin", new Vector2(300, 100)));
         room1.AddItem(ItemFactory.CreateItem("Coin", new Vector2(200, 200)));
@@ -178,7 +179,13 @@ public class Game1 : Game
         // Sala 1: Slimes (patrulham - movimento previsível)
         room1.AddEnemy(EnemyFactory.CreateEnemy("Slime", new Vector2(350, 270)));
         room1.AddEnemy(EnemyFactory.CreateEnemy("Slime", new Vector2(400, 200)));
+<<<<<<< HEAD
         room1.AddEnemy(EnemyFactory.CreateEnemy("Boss", new Vector2(200, 100)));
+=======
+        room1.AddEnemy(EnemyFactory.CreateEnemy("Ghost", new Vector2(80, 160)));
+        room1.AddEnemy(EnemyFactory.CreateEnemy("Alien", new Vector2(80, 200)));
+
+>>>>>>> 15f40be754c6557d98bc0cd85b49f8a55cef6d70
 
         // Sala 2: Ghosts (mais rápidos, te perseguem!)
         room2.AddEnemy(EnemyFactory.CreateEnemy("Ghost", new Vector2(100, 200)));
@@ -404,7 +411,7 @@ public class Game1 : Game
             if (currentKeyboard.IsKeyDown(Keys.R))
             {
                 // Reset completo - novo player, volta pra sala 1
-                _player = new Player(_playerTextures, new Vector2(100, 100));
+                _player = new Player(_playerTextures, new Vector2(40, 20));
                 DungeonManager.Instance.ChangeRoom(1);
                 if (_ambientMusic != null)
                 {
